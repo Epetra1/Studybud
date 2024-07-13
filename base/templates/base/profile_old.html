@@ -1,0 +1,35 @@
+{% extends 'main.html'%}
+
+{% block content %}
+<style>
+    .profile_container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr ;
+    }
+
+</style>
+
+
+<div class="profile_container">
+    <div>
+        <h1>{{ user.username }}</h1>
+        {% include 'base/title_message.html' %}
+
+
+
+
+    </div>
+    <div>
+
+        {% include 'base/feed_component.html' %}
+
+    </div>
+    <div>
+        
+        {% include 'base/room_message.html' %}
+
+
+    </div>
+</div>
+
+{% endblock %}

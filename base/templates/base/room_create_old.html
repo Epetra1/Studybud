@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content%}
+<p>
+    this is room_create
+
+</p>
+<form method="POST">
+    {%csrf_token%}
+
+    
+    {{form.as_p}}
+
+    <input type="submit" name="" value="submit">
+</form>
+{% endblock %}

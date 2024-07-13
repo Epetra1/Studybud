@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+    .home_container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+<div class="home_container">
+    <div>
+        {% include 'base/title_message.html' %}
+
+
+        
+    </div>
+    <div>
+        <button><a href="{% url 'room_create' %}">Create Rooms </a></button>
+        {% include 'base/feed_component.html' %}
+
+    
+    </div>
+    <div class="room_message">
+
+        {% include 'base/room_message.html' %}
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
